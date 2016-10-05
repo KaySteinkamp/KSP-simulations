@@ -37,11 +37,11 @@ Calculate optimal atmospheric ascend profile and/or maximum altitude and
 speed obtainable with a winged spaceplane with KSP's (0.24.2) Ion Engine.
 Five forces are accounted for: lift, drag, thrust, gravity, centrifugal.
 
-1) Lift:        FL = [-vz;vy]*L*Cl*P(z)
-2) Drag:        FD = -|v|*[vy;vz]*0.0049*Cd*m*P(z)
-3) Thrust:      FT = T/|v|*[vy;vz]
-4) Gravity:     FG = [0;-1/(R+z)^2]*G*m*M
-5) Centrifugal: FC = [0;vy^2]*m/(R+z)
+- Lift:        FL = [-vz;vy]*L*Cl*P(z)
+- Drag:        FD = -|v|*[vy;vz]*0.0049*Cd*m*P(z)
+- Thrust:      FT = T/|v|*[vy;vz]
+- Gravity:     FG = [0;-1/(R+z)^2]*G*m*M
+- Centrifugal: FC = [0;vy^2]*m/(R+z)
 
 ODE45 is used to solve the 2 coupled (nonlinear) second-order differential
 equations, by first re-writing them into a system of 4 coupled (nonlinear)
